@@ -1,0 +1,78 @@
+@use "_colors" as color;
+
+.newsletter_container {
+  height: 60vh;
+  width: 100%;
+  background: linear-gradient(color.$color03, color.$color03),
+    url("../ASSETS/newsletter.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.newsletter_wrapper {
+  height: 100%;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vmax;
+
+  h2 {
+    color: color.$color04;
+    font-size: 3vmax;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  p {
+    color: color.$color04;
+    font-size: 1vmax;
+  }
+
+  .input_container {
+    display: flex;
+    justify-content: center;
+    gap: 1vmax;
+    width: 100%;
+
+    input {
+      width: 50%;
+      padding: 0.5vmax 1vmax;
+      border-radius: 5px;
+      outline: none;
+      border: 3px solid transparent;
+      transition: all 200ms ease-in-out;
+      font-size: 1vmax;
+
+      &:hover,
+      &:focus {
+        border: 3px solid color.$color02;
+      }
+    }
+
+    button {
+      padding: 0.5vmax 1.5vmax;
+      font-size: 1vmax;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      background-color: #9fc5e8;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+
+      &:hover,
+      &:active {
+        background-color: #9fc5e8d0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newsletter_container {
+    height: 40vh;
+  }
+}

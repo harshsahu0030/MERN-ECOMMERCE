@@ -1,0 +1,22 @@
+@use "_colors" as color;
+
+.box_container {
+  min-height: 5vmax;
+  min-width: 18vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-wrap: nowrap;
+  background-color: color.$color02;
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    background-color: color.$color03;
+  }
+
+  h3 {
+    color: color.$color04;
+    font-size: 1.5vmax;
+  }
+}

@@ -1,0 +1,9 @@
+@use "_colors" as color;
+
+.copyright_container {
+  padding: 1vmax 0;
+  background-color: color.$color02;
+  text-align: center;
+  color: color.$color04;
+  font-size: 1vmax;
+}

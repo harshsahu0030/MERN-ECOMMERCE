@@ -1,0 +1,90 @@
+@use "_colors" as color;
+
+.shopnow_container {
+  height: fit-content;
+  width: 100%;
+  margin: auto;
+
+  .shopnow_banner {
+    display: flex;
+    gap: 2vmax;
+    height: 40vh;
+    width: 100%;
+
+    .shopnow_poster01 {
+      flex: 1;
+      height: 100%;
+      padding: 1vmax 0;
+      cursor: pointer;
+    }
+  }
+
+  .shopnow_poster02 {
+    padding: 1vmax 0;
+    height: fit-content;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  h1 {
+    padding: 1vmax;
+    margin: 1vmax 0;
+    color: color.$color04;
+    background-color: color.$color02;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      font-size: 1vmax;
+      text-decoration: none;
+      padding: 0.3vmax 0.5vmax;
+      font-weight: 500;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.7);
+      display: flex;
+      align-items: center;
+      transition: all 200ms ease-in-out;
+
+      &:hover,
+      &:active {
+        font-weight: 600;
+        color: color.$color02;
+      }
+
+      svg {
+        font-size: 1.2vmax;
+      }
+    }
+  }
+
+  .shopnow_products_container {
+    width: 100%;
+    margin-bottom: 3vmax;
+
+    .shopnow_products {
+      width: 90%;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shopnow_container {
+    .shopnow_banner {
+      display: flex;
+      flex-direction: column;
+      gap: 1vmax;
+      height: fit-content;
+      width: 100%;
+    }
+    .shopnow_products {
+      gap: 1vmax;
+    }
+
+    .shopnow_products_container {
+      margin-bottom: 5vmax;
+    }
+  }
+}

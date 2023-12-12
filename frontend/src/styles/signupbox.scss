@@ -1,0 +1,84 @@
+@use "_colors" as color;
+
+.signupbox_container {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  padding: 2vmax 0;
+}
+
+.signupbox_left {
+  height: 100%;
+  width: 50%;
+  padding: 0 2vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vmax;
+
+  h2 {
+    font-size: 2vmax;
+    width: 80%;
+  }
+
+  p {
+    width: 90%;
+    font-size: 1vmax;
+  }
+
+  .signupbox_buttons {
+    display: flex;
+    gap: 2vmax;
+    width: 75%;
+
+    button {
+      padding: 0.5vmax 1.5vmax;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      font-size: 1vmax;
+
+      &:nth-child(1) {
+        background-color: color.$color02;
+        color: color.$color04;
+
+        &:hover,
+        &:active {
+          background-color: color.$color03;
+        }
+      }
+
+      &:nth-child(2) {
+        border: 2px solid color.$color02;
+        background-color: transparent;
+
+        &:hover,
+        &:active {
+          background-color: rgb(249, 246, 242);
+        }
+      }
+    }
+  }
+}
+
+.signupbox_right {
+  height: 100%;
+  width: 50%;
+  background-color: yellow;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signupbox_container {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+  }
+}

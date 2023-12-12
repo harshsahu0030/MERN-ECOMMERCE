@@ -1,0 +1,128 @@
+@use "_colors" as color;
+
+.products_container {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  margin: auto;
+  position: relative;
+
+  .products_left {
+    height: 100%;
+    width: 18%;
+    padding: 1vmax 0.5vmax;
+
+    h3 {
+      display: block;
+
+      svg {
+        display: none;
+      }
+    }
+
+    .products_categories {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: fit-content;
+      padding: 1vmax 0;
+      gap: 0.2vmax;
+
+      div {
+        display: flex;
+        padding: 0vmax 0.5vmax;
+        gap: 0.5vmax;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+          white-space: "nowrap";
+          overflow: "hidden";
+          text-overflow: "ellipsis";
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          svg {
+            color: #f1c232;
+          }
+        }
+      }
+    }
+  }
+
+  .products_right {
+    border-left: 1px solid #d9d9d9;
+    padding: 1vmax;
+    height: 100%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vmax;
+
+    .products_right_top {
+      display: flex;
+      padding: 1vmax 2vmax;
+      background-color: color.$color02;
+
+      span {
+        font-size: 1vmax;
+        color: color.$color04;
+      }
+    }
+
+    .products_right_products {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 1vmax;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products_container {
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    .products_left {
+      width: 100%;
+      height: 100%;
+      background-color: color.$color02;
+      z-index: 15;
+
+      h3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1vmax;
+        color: #fefefe;
+        padding: 0.5vmax;
+
+        svg {
+          font-size: 5vmax;
+          display: block;
+        }
+      }
+
+      .products_filter_container {
+        display: none;
+      }
+
+      .products_categories {
+        color: #fefefe;
+      }
+    }
+
+    .products_right {
+      width: 100%;
+
+      .products_right_products {
+        gap: 0;
+      }
+    }
+  }
+}

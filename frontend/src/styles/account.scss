@@ -1,0 +1,133 @@
+@use "_colors" as color;
+
+.account_container {
+  height: 88vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  padding: 1vmax 0;
+}
+
+.account_left {
+  height: 100%;
+  width: 50%;
+  padding: 0 2vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vmax;
+
+  h2 {
+    font-size: 3vmax;
+    color: color.$color02;
+  }
+  h4 {
+    font-weight: 400;
+  }
+
+  a {
+    width: 50%;
+    text-decoration: none;
+    border: 2px solid color.$color03;
+    padding: 0.5vmax 1vmax;
+
+    p {
+      font-size: 1vmax;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: color.$color02;
+      font-weight: 500;
+    }
+
+    &:hover {
+      border: 2px solid color.$color02;
+
+      p {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .input_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vmax;
+    width: 100%;
+
+    input {
+      width: 50%;
+      padding: 0.5vmax 1vmax;
+      border-radius: 5px;
+      outline: none;
+      border: 3px solid #d9d9d9;
+      transition: all 200ms ease-in-out;
+      font-size: 1vmax;
+
+      &:hover,
+      &:focus {
+        border: 3px solid color.$color02;
+      }
+    }
+
+    button {
+      padding: 0.5vmax 1.5vmax;
+      font-size: 1vmax;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      background-color: color.$color02;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      color: color.$color04;
+      width: fit-content;
+
+      &:hover,
+      &:active {
+        background-color: color.$color03;
+      }
+    }
+  }
+}
+
+.account_right {
+  height: 100%;
+  width: 50%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .account_container {
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 5vmax;
+  }
+
+  .account_left {
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .input_form {
+    input {
+      margin: auto;
+    }
+    button {
+      align-self: center;
+    }
+  }
+
+  .account_right {
+    width: 100%;
+    height: 10vh;
+    filter: blur(3px);
+  }
+}

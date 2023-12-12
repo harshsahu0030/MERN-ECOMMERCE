@@ -1,0 +1,35 @@
+@use "_colors" as color;
+
+.newarrivals_container {
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+
+  .newarrivals_poster01 {
+    padding: 1vmax 0;
+    height: fit-content;
+    width: 100%;
+  }
+
+  h1 {
+    padding: 1vmax;
+    margin: 1vmax 0;
+    color: color.$color04;
+    background-color: color.$color02;
+  }
+
+  .newarrivals_products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vmax;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .newarrivals_container {
+    .newarrivals_products {
+      gap: 1vmax;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@use "_colors" as color;
+
+.signup_container {
+  min-height: 88vh;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  padding: 1vmax 0;
+}
+
+.signup_left {
+  height: 100%;
+  width: 50%;
+  padding: 0 2vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vmax;
+
+  h2 {
+    font-size: 3vmax;
+    color: color.$color02;
+  }
+
+  p {
+    font-size: 1vmax;
+  }
+
+  .input_form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vmax;
+    width: 100%;
+
+    .signup_image_register {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      align-items: center;
+      gap: 0.5vmax;
+
+      label {
+        background-color: color.$color02;
+        color: white;
+        padding: 0.5vmax;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        font-size: 0.8vmax;
+      }
+
+      img {
+        border-radius: 50%;
+        height: 10vmax;
+        width: 10vmax;
+      }
+    }
+
+    > input {
+      width: 50%;
+      padding: 0.5vmax 1vmax;
+      border-radius: 5px;
+      outline: none;
+      border: 3px solid #d9d9d9;
+      transition: all 200ms ease-in-out;
+      font-size: 1vmax;
+
+      &:hover,
+      &:focus {
+        border: 3px solid color.$color02;
+      }
+    }
+
+    button {
+      padding: 0.5vmax 1.5vmax;
+      font-size: 1vmax;
+      border-radius: 5px;
+      border: 1px solid transparent;
+      background-color: color.$color02;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 200ms ease-in-out;
+      color: color.$color04;
+      width: fit-content;
+
+      &:hover,
+      &:active {
+        background-color: color.$color03;
+      }
+    }
+  }
+}
+
+.signup_right {
+  height: 100%;
+  width: 50%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .signup_container {
+    width: 100%;
+    flex-direction: column-reverse;
+    gap: 5vmax;
+  }
+
+  .signup_left {
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .input_form {
+    input {
+      margin: auto;
+    }
+    button {
+      align-self: center;
+    }
+  }
+
+  .signup_right {
+    width: 100%;
+    height: 10vh;
+    filter: blur(3px);
+  }
+}

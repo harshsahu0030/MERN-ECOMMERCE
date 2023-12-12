@@ -1,0 +1,24 @@
+@use "_colors" as color;
+
+.productsadmin_container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  .productsadmin_right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    .productsadmin_boxes {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      padding: 1vmax;
+      flex-wrap: wrap;
+      gap: 1vmax;
+    }
+  }
+}

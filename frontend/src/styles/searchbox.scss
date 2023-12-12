@@ -1,0 +1,116 @@
+@use "_colors" as color;
+
+.seachbox_outer_container {
+  height: 9vh;
+  width: 100%;
+}
+
+.searchbox_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background-color: color.$color02;
+  border-radius: 10px;
+}
+
+.searchbox_left {
+  display: flex;
+  height: 100%;
+  width: 40%;
+  justify-content: center;
+
+  div {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    input {
+      width: 100%;
+      height: 70%;
+      outline: none;
+      border: 2px solid transparent;
+      padding: 0 3vmax;
+      background-color: #efefef;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      transition: all 300ms ease-in-out;
+      font-size: 1vmax;
+
+      &:hover,
+      &:focus {
+        border: 2px solid color.$color02;
+        background-color: #fefefe;
+      }
+    }
+
+    svg {
+      font-size: 1.5vmax;
+      position: absolute;
+      left: 0.8vmax;
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+
+      &:hover,
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.searchbox_right {
+  display: flex;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  gap: 2vmax;
+
+  div {
+    font-weight: 600;
+    padding: 0 1.5vmax;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 4px solid transparent;
+    color: color.$color04;
+    transition: all 200ms ease-in-out;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &:hover {
+      border-bottom: 4px solid color.$color04;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .searchbox_left {
+    width: 100%;
+
+    div {
+      input {
+        font-size: 1.5vmax;
+        padding: 0 4vmax;
+      }
+
+      svg {
+        font-size: 2vmax;
+        left: 1vmax;
+      }
+    }
+  }
+
+  .searchbox_right {
+    display: none;
+  }
+}

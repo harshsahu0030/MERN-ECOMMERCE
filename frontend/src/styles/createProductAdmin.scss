@@ -1,0 +1,108 @@
+@use "_colors" as color;
+
+.createproductadmin_container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  .createproductadmin_right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form {
+    height: 100%;
+    width: 70%;
+    margin: auto;
+    padding: 2vmax 1vmax;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+
+    h1 {
+      font-size: 1.5vmax;
+      text-align: center;
+    }
+
+    .createProduct_image {
+      min-height: 30vh;
+      max-height: 30vh;
+      width: 100%;
+      overflow-y: scroll;
+      display: flex;
+      align-items: center;
+      gap: 1vmax;
+      padding: 1vmax;
+      border-radius: 10px;
+      background-color: rgb(224, 224, 224);
+
+      img {
+        height: 25vh;
+        width: 25vh;
+        object-fit: fill;
+        object-position: center;
+      }
+    }
+  }
+}
+
+.createproduct_label {
+  font-weight: 600;
+  font-size: 1vmax;
+}
+
+.createproduct_input,
+.createproduct_textarea,
+.createproduct_select {
+  padding: 0.5vmax 1vmax;
+  font-size: 1vmax;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  transition: all 200ms ease-in-out;
+
+  &:focus,
+  &:hover {
+    box-shadow: 1px 1px 10px 2px color.$color02;
+  }
+}
+
+.createproduct_inputs {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5vmax;
+  gap: 0.2vmax;
+  font-size: 1vmax;
+}
+
+.createproduct_area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0.5vmax;
+  gap: 0.2vmax;
+  font-size: 1vmax;
+}
+
+.createproduct_btn {
+  font-size: 1vmax;
+  width: fit-content;
+  display: flex;
+  align-self: center;
+  padding: 0.5vmax 2vmax;
+  border-radius: 10px;
+  background-color: color.$color02;
+  color: color.$color04;
+  margin: 2vmax 0;
+  border: none;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  &:focus,
+  &:hover {
+    box-shadow: 1px 1px 10px 2px color.$color02;
+  }
+}
